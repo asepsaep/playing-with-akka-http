@@ -40,6 +40,7 @@ object UserManager extends App with JsonProtocol with Config{
 
   val bindingFuture = Http().bindAndHandle(route, interface, port)
 
+  println("Press Enter to shutdown HTTP server")
   StdIn.readLine()
   bindingFuture.flatMap(_.unbind()).onComplete { _ =>
     service.close()
