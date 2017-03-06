@@ -1,3 +1,5 @@
+enablePlugins(JavaAppPackaging)
+
 name := """akka-http-rest"""
 
 version := "1.0"
@@ -25,3 +27,4 @@ libraryDependencies ++= Seq(
 )
 
 scalacOptions in ThisBuild ++= Seq("-unchecked", "-deprecation")
+
